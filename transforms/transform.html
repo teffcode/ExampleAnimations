@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .canasta {
+            border: 1px solid plum;
+            position: relative;
+            width: 500px;
+            height: 200px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            /*transform: rotar | sesgar | posición | tamaño*/
+            transform: rotate(5deg) skew(10deg) translate(50px) scale(1.5);
+        }
+        .canasta:hover .pelota.a {
+            left: calc(50% - 100px);
+        }
+        .canasta:hover .pelota.b{
+            right: calc(50% - 100px);
+        }
+        .pelota {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 50%;
+            transition: 1s;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Gloria Hallelujah', cursive;
+        }
+        .pelota.a{
+            left: 0;
+        }
+        .pelota.b {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="canasta">
+        <div class="pelota a">Hi</div>
+        <div class="pelota b">Animation!</div>
+    </div>
+</body>
+</html>

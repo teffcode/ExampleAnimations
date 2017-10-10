@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Rochester" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            border: 3px solid skyblue;
+        }
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: powderblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            font-family: 'Rochester', cursive;
+            font-size: 40px;
+            color: white;
+            transition: 300ms;
+        }
+        .container:hover .cuadrado{
+            /*transform: rotateX(45deg);*/
+            /*transform: rotateY(45deg);*/
+            /*transform: rotateZ(45deg);*/
+            /*transform: rotateX(45deg) rotate(45deg) rotate(45deg);*/
+            /*transform: rotate3d(x, y, z, rotate);*/
+            transform: rotate3d(1, 0, 1, 45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cuadrado">Hi</div>
+    </div>
+</body>
+</html>
