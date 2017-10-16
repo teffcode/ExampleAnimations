@@ -177,19 +177,58 @@ input:focus, textarea:focus {
 
 
 .guitarra {
-  margin: 10px 10px 40px 10px;
-  padding: 10px;
+  margin: 10px 0 40px;
+  padding: 10px 2em;
   /*overflow: hidden;*/
   border: 1px solid #1F313C;
-  border-radius: 8px;
-}
-.guitarra ol {
-  padding: 0;
-}
-.guitarra.b {
-  height: 190px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  min-height: 250px;
+  transition: .3s;
+  position: relative;
 }
 
+.guitarra:hover {
+  /*box-shadow: x y % color*/
+  box-shadow: 10px 10px 0 #ff3149;
+}
+
+.guitarra-title {
+  font-size: 3em;
+  margin: 0 0 .2em;
+  padding-bottom: .2em;
+  border-bottom: 2px dashed #1e313d;
+}
+
+.guitarra:nth-of-type(even){
+  justify-content: flex-end;
+}
+
+.guitarra:nth-of-type(even):hover{
+  box-shadow: -10px 10px 0 black;
+}
+
+.guitarra:nth-of-type(even) .guitarra-image{
+  left: 0;
+  right: initial;
+}
+
+.guitarra-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.guitarra ol {
+  padding: 0;
+  list-style: none;
+  counter-reset: features;
+}
+.guitarra li::before {
+  counter-increment: features;
+  content: counter(features)". "
+}
 
 .derecha {
   float: right;

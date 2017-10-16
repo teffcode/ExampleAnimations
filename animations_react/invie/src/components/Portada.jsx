@@ -1,24 +1,23 @@
 import React, {Component} from 'react';
 
 class Portada extends Component {
+
     render(){
         return(
             <section id="portada" className="portada background">
                 <header id="header" className="header contenedor">
                     <figure className="logotipo">
-                        <img src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x" width="186" height="60" alt="Invie logotipo"/>
+                        <img src={this.props.logo} width="186" height="60" alt="Invie logotipo"/>
                     </figure>
                     <nav className="menu">
                         <ul>
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="#guitarras">Guitarras</a>
-                            </li>
-                            <li>
-                                <a href="precios.html">Precios</a>
-                            </li>
+                            {this.props.menu.map((item) => {
+                                return (
+                                    <li>
+                                        <a href={item.href}>{item.title}</a>
+                                    </li>
+                                )
+                            })}
                         </ul>
                     </nav>
                 </header>
