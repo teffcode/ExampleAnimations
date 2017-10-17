@@ -9,7 +9,7 @@ import logoPortada from './images/invie.png';
 import acustica from './images/invie-acustica.png';
 import classic from './images/invie-classic.png';
 
-import './App.css';
+// import './App.css';
 
 // const data = {
 //   menu: [
