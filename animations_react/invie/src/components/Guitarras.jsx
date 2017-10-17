@@ -31,18 +31,25 @@ class Guitarras extends Component {
                                         width="350"
                                     />
                                 </CSSTransitionGroup>
-                                <div className="contenedor-guitarra">
-                                <h3 className="guitarra-title">{guitarra.name}</h3>
-                                <ol>
-                                    {
-                                        guitarra.features.map((feature, index) => {
-                                            return (
-                                                <li key={index}>{feature}</li>
-                                            );
-                                        })
-                                    }
-                                </ol>
-                                </div>
+                                <CSSTransitionGroup
+                                    transitionName="fade" 
+                                    // tiempo en que va a ser borrada del DOM y optimizarla
+                                    transitionEnterTimeout={300} // en milis
+                                    transitionLeave={false} // no quiero que hayan transiciones de salida
+                                >
+                                    <div className="contenedor-guitarra" key={guitarra.name}>
+                                    <h3 className="guitarra-title">{guitarra.name}</h3>
+                                    <ol>
+                                        {
+                                            guitarra.features.map((feature, index) => {
+                                                return (
+                                                    <li key={index}>{feature}</li>
+                                                );
+                                            })
+                                        }
+                                    </ol>
+                                    </div>
+                                </CSSTransitionGroup>
                             </article>  
                         );
                     })
