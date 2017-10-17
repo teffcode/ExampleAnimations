@@ -6,7 +6,8 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 // import './index.css';
-import './App.css';
+// import './App.css';
+import './css/invie.css';
 import './css/animations.css';
 import App from './App';
 
