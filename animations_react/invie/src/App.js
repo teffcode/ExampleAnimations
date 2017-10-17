@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import cheeet from 'cheet.js';
 
 import Portada from './components/Portada.jsx';
 import Guitarras from './components/Guitarras.jsx';
@@ -12,57 +11,55 @@ import classic from './images/invie-classic.png';
 
 import './App.css';
 
-cheeet('i n v i e', ()=>{
-  console.log('lo lograste, descubriste el easter egg')
-})
+// const data = {
+//   menu: [
+//             {
+//                 href: 'index.html',
+//                 title: 'Home'
+//             },
+//             {
+//                 href: '#guitarras',
+//                 title: 'Guitarras'
+//             },
+//             {
+//                 href: 'precios.html',
+//                 title: 'Precios'
+//             }
+//         ],
+//   logoPortada: logoPortada,
+// }
 
-const data = {
-  menu: [
-            {
-                href: 'index.html',
-                title: 'Home'
-            },
-            {
-                href: '#guitarras',
-                title: 'Guitarras'
-            },
-            {
-                href: 'precios.html',
-                title: 'Precios'
-            }
-        ],
-  logoPortada: logoPortada,
-}
-
-const guitarras = [
-  {
-      image: acustica,
-      alt: 'Guitarra Invie Acustica',
-      name: 'Invie Acustica',
-      features: [
-          'Estilo vintage',
-          'Madera pura',
-          'Incluye estuche invisible de aluminio'
-      ]
-  },
-  {
-      image: classic,
-      alt: 'Guitarra Invie Classic',
-      name: 'Invie Classic',
-      features: [
-          'Estilo vintage',
-          'Liviana',
-          'Empieza tu camino'
-      ]
-  }
-]
+// const guitarras = [
+//   {
+//       image: acustica,
+//       alt: 'Guitarra Invie Acustica',
+//       name: 'Invie Acustica',
+//       features: [
+//           'Estilo vintage',
+//           'Madera pura',
+//           'Incluye estuche invisible de aluminio'
+//       ]
+//   },
+//   {
+//       image: classic,
+//       alt: 'Guitarra Invie Classic',
+//       name: 'Invie Classic',
+//       features: [
+//           'Estilo vintage',
+//           'Liviana',
+//           'Empieza tu camino'
+//       ]
+//   }
+// ]
 
 class App extends Component {
   render() {
     return (
       <section className="Invie">
-        <Portada menu={data.menu} logo={data.logoPortada}/>
-        <Guitarras guitarras={guitarras}/>
+        {/*<Portada menu={data.menu} logo={data.logoPortada}/>*/}
+        <Portada/>
+        {/*<Guitarras guitarras={guitarras}/>*/}
+        <Guitarras/>
         <Footer/>
       </section>
     );

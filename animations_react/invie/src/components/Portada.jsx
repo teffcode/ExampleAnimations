@@ -1,4 +1,14 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+
+
+// Aquí recibimos logo y menu como propiedades del componente Portada 
+function mapStateToProps(state){
+    return{
+        logo: state.logoPortada,
+        menu: state.menu
+    }
+}
 
 class Portada extends Component {
 
@@ -31,4 +41,5 @@ class Portada extends Component {
     }
 }
 
-export default Portada;
+// mapStateToProps -> saca los datos del store
+export default connect(mapStateToProps)(Portada);
